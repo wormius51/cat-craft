@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bw6dojh214d84"]
+
+[ext_resource type="Texture2D" uid="uid://bp07fhiixutfc" path="res://images/Background.png" id="1_3qsvq"]
+[ext_resource type="Script" uid="uid://cht3cavn5os4a" path="res://scripts/Play.gd" id="1_5da7g"]
+[ext_resource type="Texture2D" uid="uid://brisuuqhhsh15" path="res://images/the main part of the interior.png" id="1_5pgtg"]
+[ext_resource type="PackedScene" uid="uid://ddyjwvjucv2di" path="res://scenes/Cat.tscn" id="2_25ryr"]
+[ext_resource type="PackedScene" uid="uid://dk5idiyigu4tp" path="res://scenes/Cauldron.tscn" id="4_kotfh"]
+[ext_resource type="PackedScene" uid="uid://belgnu4gca651" path="res://scenes/potions/RedPotion.tscn" id="5_vsqh1"]
+[ext_resource type="PackedScene" uid="uid://cji8dqgo3wm5v" path="res://scenes/potions/GreenPotion.tscn" id="6_5da7g"]
+[ext_resource type="PackedScene" uid="uid://b8lh7fci40pqy" path="res://scenes/potions/BluePotion.tscn" id="7_or1o4"]
+[ext_resource type="PackedScene" uid="uid://dcbusqhhqq22b" path="res://scenes/potions/ResetPotion.tscn" id="9_or1o4"]
+
+[node name="Play" type="Node2D" unique_id=1323280216 node_paths=PackedStringArray("cats_contianer")]
+texture_filter = 5
+script = ExtResource("1_5da7g")
+cats_contianer = NodePath("CatsContainer")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=905265279]
+position = Vector2(576.111, 324.5)
+scale = Vector2(6, 6)
+texture = ExtResource("1_3qsvq")
+
+[node name="CatsContainer" type="Node2D" parent="." unique_id=1697518505]
+
+[node name="Cat" parent="CatsContainer" unique_id=162555297 instance=ExtResource("2_25ryr")]
+position = Vector2(388, 498)
+scale = Vector2(4, 4)
+
+[node name="TheMainPartOfTheInterior" type="Sprite2D" parent="." unique_id=920399412]
+position = Vector2(576.111, 324.5)
+scale = Vector2(6, 6)
+texture = ExtResource("1_5pgtg")
+
+[node name="Cauldron" parent="." unique_id=1211381875 instance=ExtResource("4_kotfh")]
+position = Vector2(940, 420)
+scale = Vector2(6, 6)
+
+[node name="RedPotion" parent="." unique_id=1787860594 instance=ExtResource("5_vsqh1")]
+position = Vector2(188, 89)
+scale = Vector2(6, 6)
+
+[node name="GreenPotion" parent="." unique_id=36947888 instance=ExtResource("6_5da7g")]
+position = Vector2(318, 82)
+scale = Vector2(6, 6)
+
+[node name="BluePotion" parent="." unique_id=1432366516 instance=ExtResource("7_or1o4")]
+position = Vector2(470, 81)
+scale = Vector2(6, 6)
+
+[node name="ResetPotion" parent="." unique_id=1490416961 instance=ExtResource("9_or1o4")]
+position = Vector2(644, 82)
+scale = Vector2(6, 6)

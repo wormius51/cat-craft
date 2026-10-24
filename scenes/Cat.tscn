@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ddyjwvjucv2di"]
+
+[ext_resource type="Script" uid="uid://d2jumhxmee3g" path="res://scripts/Cat.gd" id="1_7nueg"]
+[ext_resource type="Texture2D" uid="uid://bns38olwhh2vl" path="res://images/cat-Sheet.png" id="2_2olvd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spuq0"]
+atlas = ExtResource("2_2olvd")
+region = Rect2(0, 0, 39, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_limvi"]
+atlas = ExtResource("2_2olvd")
+region = Rect2(39, 0, 39, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3r2k"]
+atlas = ExtResource("2_2olvd")
+region = Rect2(78, 0, 39, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38gee"]
+atlas = ExtResource("2_2olvd")
+region = Rect2(117, 0, 39, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3aiwl"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_spuq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_limvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3r2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38gee")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cat" type="Node2D" unique_id=162555297]
+script = ExtResource("1_7nueg")
+metadata/_custom_type_script = "uid://d2jumhxmee3g"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1746162722]
+texture_filter = 5
+sprite_frames = SubResource("SpriteFrames_3aiwl")
+autoplay = "default"

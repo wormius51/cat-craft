@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dk5idiyigu4tp"]
+
+[ext_resource type="Script" uid="uid://cl26djf38tjif" path="res://scripts/Cauldron.gd" id="1_t6bb6"]
+[ext_resource type="Texture2D" uid="uid://dc1wga580tp36" path="res://images/effect under the boiler-Sheet.png" id="2_quaa6"]
+[ext_resource type="Texture2D" uid="uid://ccxxnwn8uxlwo" path="res://images/cauldron/boiler.png" id="2_x74j4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wfbq"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(0, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wamsx"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(72, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1lyg"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(144, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe12o"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(216, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex7mg"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(288, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir52o"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(360, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx00t"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(432, 0, 72, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqpyu"]
+atlas = ExtResource("2_quaa6")
+region = Rect2(504, 0, 72, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3aiwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wfbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wamsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1lyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe12o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ex7mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir52o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx00t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqpyu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Cauldron" type="Node2D" unique_id=1211381875]
+texture_filter = 5
+script = ExtResource("1_t6bb6")
+metadata/_custom_type_script = "uid://cl26djf38tjif"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=196948559]
+position = Vector2(0, 19)
+sprite_frames = SubResource("SpriteFrames_3aiwl")
+autoplay = "default"
+frame_progress = 0.9209371
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1884562560]
+texture = ExtResource("2_x74j4")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://belgnu4gca651"]
+
+[ext_resource type="Script" uid="uid://eta4kkasev0h" path="res://scripts/Potion.gd" id="1_5d7pt"]
+[ext_resource type="Texture2D" uid="uid://x8x0enlgugw8" path="res://images/Potion1.png" id="2_3j0f8"]
+
+[node name="RedPotion" type="Node2D" unique_id=1787860594]
+script = ExtResource("1_5d7pt")
+red = true
+metadata/_custom_type_script = "uid://eta4kkasev0h"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=803468836]
+texture_filter = 5
+texture = ExtResource("2_3j0f8")
+
+[node name="Button" type="Button" parent="." unique_id=1222990975]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 8.0
+offset_bottom = 9.0
+
+[connection signal="pressed" from="Button" to="." method="add_to_cauldron"]

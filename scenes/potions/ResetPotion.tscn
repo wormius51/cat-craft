@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dcbusqhhqq22b"]
+
+[ext_resource type="Script" uid="uid://ckqayld8v704r" path="res://scripts/ResetPotion.gd" id="1_t8js0"]
+[ext_resource type="Texture2D" uid="uid://d02dui3rjuq6j" path="res://images/Potion4.png" id="2_0j7kx"]
+
+[node name="ResetPotion" type="Node2D" unique_id=1490416961]
+script = ExtResource("1_t8js0")
+metadata/_custom_type_script = "uid://ckqayld8v704r"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2104324220]
+texture_filter = 5
+texture = ExtResource("2_0j7kx")
+
+[node name="Button" type="Button" parent="." unique_id=1739211829]
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 10.0
+offset_bottom = 11.0
+
+[connection signal="pressed" from="Button" to="." method="reset_cauldron"]
